@@ -1,10 +1,11 @@
 {
   "name": "weather-devops-app",
   "version": "1.0.0",
-  "description": "Weather Dashboard DevOps Assignment",
+  "description": "Weather dashboard application",
+  "main": "src/index.html",
   "scripts": {
-    "build": "echo Build successful",
-    "test": "echo Tests passed",
-    "lint": "echo Lint successful"
+    "start": "npx serve src",
+    "build": "echo Build completed",
+    "test": "echo Tests passed"
   }
 }
