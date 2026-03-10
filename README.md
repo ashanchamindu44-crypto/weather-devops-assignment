@@ -1,8 +1,5 @@
 # Weather Dashboard
 
-![CI Pipeline](https://github.com/ashanchamindu44-crypto/weather-dashboard/workflows/CI%20Pipeline/badge.svg)
-![Deploy](https://github.com/ashanchamindu44-crypto/weather-dashboard/workflows/Deploy%20to%20Production/badge.svg)
-
 A modern, responsive weather dashboard application that displays current weather conditions and a 5-day forecast for any city worldwide.
 
 ## Group Information
@@ -15,191 +12,169 @@ A modern, responsive weather dashboard application that displays current weather
 
 ## Project Description
 
-Weather Dashboard is a modern web application that allows users to:
-- Search for weather information by city name
-- View current weather conditions including temperature, humidity, wind speed, and visibility
-- Check the 5-day weather forecast
-- Access popular cities quickly
+The Weather DevOps App is a responsive web application that allows users to search for weather information by entering a city name. The application fetches real-time weather data from the OpenWeatherMap API and displays important weather details such as temperature and weather conditions.
 
-The application features a modern interface with responsive design across all device sizes.
+This project demonstrates professional Git workflows, DevOps practices, CI/CD automation, and cloud deployment using GitHub and Vercel.
 
 ## Live Deployment
 
-**Live URL:** https://test-ymgamages-projects.vercel.app
-
-> Note: Replace `ashanchamindu44-crypto` with your actual GitHub username after deployment.
+🔗 Live URL: https://weather-devops-app.vercel.app
 
 ## Technologies Used
 
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **Design:** Custom CSS with Glassmorphism effects
-- **API:** OpenWeatherMap API
-- **CI/CD:** GitHub Actions
-- **Deployment:** GitHub Pages
-- **Version Control:** Git & GitHub
+HTML5
+
+CSS3
+
+JavaScript
+
+OpenWeatherMap API
+
+Git & GitHub
+
+GitHub Actions (CI/CD)
+
+Vercel (Cloud Deployment)
 
 ## Features
 
-- **City Search:** Search weather for any city worldwide
-- **Current Weather:** Real-time temperature, description, and conditions
-- **5-Day Forecast:** Extended weather forecast with daily breakdowns
-- **Weather Details:** Wind speed, humidity, feels-like temperature, visibility
-- **Quick Cities:** One-click access to popular cities
-- **Responsive Design:** Works on mobile, tablet, and desktop
-- **Modern UI:** Professional interface design
-- **Local Storage:** Remembers last searched city
+Search weather by city name
 
+Display current temperature
+
+Display weather description
+
+Responsive user interface
+
+Real-time API data fetching
+
+Continuous Integration using GitHub Actions
+
+Automated deployment to Vercel
+
+## Repository Structure
+weather-devops-app
+│
+├── .github
+│   └── workflows
+│       ├── ci.yml
+│       └── deploy.yml
+│
+├── src
+│   ├── index.html
+│   ├── styles
+│   │   └── style.css
+│   └── scripts
+│       └── app.js
+│
+├── README.md
+├── package.json
+└── .gitignore
 ## Branch Strategy
 
-We implemented the following branching strategy:
+We implemented the following Git branching strategy:
 
-```
-main          ← Production branch (protected, auto-deploys)
-  │
-  └── develop ← Integration branch
-        │
-        ├── feature/homepage-layout
-        ├── feature/weather-api
-        ├── feature/forecast-cards
-        └── feature/responsive-design
-```
+main → Production-ready code (protected branch)
 
-- `main`: Production-ready code, protected branch
-- `develop`: Integration branch for feature merging
-- `feature/*`: Individual feature development branches
+develop → Integration branch for development
+
+feature/* → Feature-specific branches used by individual developers
+
+All feature branches were merged into develop via Pull Requests and later merged into main for production deployment.
+
+## CI/CD Pipeline
+
+We implemented Continuous Integration and Continuous Deployment using GitHub Actions.
+
+## CI Pipeline
+
+The CI pipeline runs automatically when code is pushed to:
+
+main
+
+develop
+
+feature/*
+
+CI tasks include:
+
+Checking out repository
+
+Installing dependencies
+
+Running lint checks
+
+Running build process
+
+Running test scripts
+
+CI configuration file:
+
+.github/workflows/ci.yml
+## Deployment Pipeline
+
+The deployment pipeline runs when code is pushed to the main branch.
+
+Deployment steps:
+
+GitHub Actions triggers deployment workflow
+
+Repository code is checked out
+
+Application is deployed automatically to Vercel
+
+Live website is updated
+
+Deployment workflow file:
+
+.github/workflows/deploy.yml
+Build Status
 
 ## Individual Contributions
+### (DevOps Engineer)
 
-### K G ASHAN CHAMINDU (ITBNM-2313-0009)
-**Role:** DevOps Engineer & Full-Stack Developer
+Repository initialization and configuration
 
-#### DevOps Contributions:
-- Repository setup and configuration
-- GitHub Actions CI/CD pipeline implementation (ci.yml, deploy.yml)
-- Deployment setup and management
-- Branch protection configuration
-- Merge conflict resolution
+Branch management strategy
 
-#### Development Contributions:
-- Complete Weather Dashboard UI (HTML/CSS)
-- JavaScript application logic
-- OpenWeatherMap API integration
-- 5-day forecast feature
-- Responsive design implementation
-- Interface styling
-- Local storage implementation
+GitHub Actions CI pipeline implementation
 
-## Setup Instructions
+Deployment automation using Vercel
 
-### Prerequisites
-- Node.js (version 18 or higher)
-- Git
-- OpenWeatherMap API key (free)
+Branch protection configuration
 
-### Getting Your API Key
-1. Go to OpenWeatherMap
-2. Sign up for a free account
-3. Navigate to "API Keys" in your account
-4. Copy your API key
+Merge conflict resolution
 
-### Installation
+Monitoring CI/CD pipelines
 
-```bash
-# Clone the repository
-git clone https://github.com/ashanchamindu44-crypto/weather-dashboard.git
+### (Backend Developer)
 
-# Navigate to project directory
-cd weather-dashboard
+Implemented weather API integration
 
-# Install dependencies
-npm install
+Developed weather data fetching functionality
 
-# Add your API key
-# Open src/scripts/app.js and replace 'YOUR_API_KEY_HERE' with your actual API key
+Implemented asynchronous API calls
 
-# Run development server
-npm run dev
-```
+Handled API response parsing
 
-The application will open at `http://localhost:3000`
+Contributed backend logic improvements
 
-## Deployment Process
+### (Frontend Developer)
 
-### How the CI/CD Pipeline Works:
+Designed responsive UI layout
 
-1. **CI Pipeline (ci.yml):**
-   - Triggers on push to `main`, `develop`, and `feature/*` branches
-   - Triggers on pull requests to `main` and `develop`
-   - Checks out code, installs dependencies
-   - Runs lint checks and builds
-   - Verifies project structure
+Implemented user interface components
 
-2. **Deployment Pipeline (deploy.yml):**
-   - Triggers on push to `main` branch only
-   - Builds the project
-   - Deploys to GitHub Pages automatically
+Styled the application using CSS
 
-### Manual Deployment:
+Integrated frontend with backend functionality
 
-1. Go to your hosting platform and sign in with GitHub
-2. Add New Project
-3. Import your `weather-dashboard` repository
-4. Set root directory to `src` (if applicable)
-5. Deploy
+Maintained and updated README documentation
 
-## Project Structure
+weather-devops-assignment
 
-```
-weather-dashboard/
-├── .github/
-│   └── workflows/
-│       ├── ci.yml           # CI workflow
-│       └── deploy.yml       # Deployment workflow
-├── src/
-│   └── ...                  # Source files
-├── .gitignore               # Git ignore file
-├── README.md                # This file
-└── package.json             # Node.js configuration
-```
+## Build Status
 
-## Git Workflow Used
+![CI Pipeline](https://github.com/ashanchamindu44-crypto/weather-devops-assignment/actions/workflows/ci.yml/badge.svg)
 
-1. Created feature branches from `develop`
-2. Made commits with conventional commit messages
-3. Created pull requests with descriptions
-4. Merged approved PRs to `develop`
-5. Merged `develop` to `main` for production releases
-
-### Commit Message Convention:
-- `feat:` - New feature
-- `fix:` - Bug fix
-- `docs:` - Documentation changes
-- `style:` - Formatting changes
-- `refactor:` - Code refactoring
-- `test:` - Adding tests
-- `chore:` - Maintenance tasks
-
-## Challenges Faced
-
-1. **API Key Security:**
-   - Challenge: Keeping API keys secure in public repository
-   - Solution: Using environment variables and documenting the setup process
-
-2. **Responsive Design:**
-   - Challenge: Making interface adaptable across all devices
-   - Solution: Used CSS media queries and flexible grid layouts
-
-3. **Merge Conflicts:**
-   - Challenge: Resolving conflicts when merging feature branches
-   - Solution: Used git merge with conflict resolution
-
-## License
-
-This project is created for educational purposes as part of the Advanced Git & DevOps Assignment.
-
----
-
-**Module:** Systems Administration & Maintenance  
-**Assignment:** Advanced Git & DevOps Team Collaboration  
-**Instructor:** Isuru Samarappulige  
-**Submission Date:** January 18th, 2025
+![Deploy](https://github.com/ashanchamindu44-crypto/weather-devops-assignment/actions/workflows/deploy.yml/badge.svg)
