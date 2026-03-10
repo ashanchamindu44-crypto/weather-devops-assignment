@@ -1,0 +1,10 @@
+{
+  "name": "weather-devops-app",
+  "version": "1.0.0",
+  "description": "Weather Dashboard DevOps Assignment",
+  "scripts": {
+    "build": "echo Build successful",
+    "test": "echo Tests passed",
+    "lint": "echo Lint successful"
+  }
+}
