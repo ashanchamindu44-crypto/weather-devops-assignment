@@ -19,6 +19,71 @@ const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 // DOM ELEMENTS
 // ============================================
 
+const elements = {
+    cityInput: document.getElementById('cityInput'),
+    searchBtn: document.getElementById('searchBtn'),
+    loading: document.getElementById('loading'),
+    errorMessage: document.getElementById('errorMessage'),
+    errorText: document.getElementById('errorText'),
+    currentWeather: document.getElementById('currentWeather'),
+    forecastSection: document.getElementById('forecastSection'),
+    forecastContainer: document.getElementById('forecastContainer'),
+    // Current weather elements
+    cityName: document.getElementById('cityName'),
+    countryCode: document.getElementById('countryCode'),
+    dateTime: document.getElementById('dateTime'),
+    temperature: document.getElementById('temperature'),
+    description: document.getElementById('description'),
+    weatherIcon: document.getElementById('weatherIcon'),
+    windSpeed: document.getElementById('windSpeed'),
+    humidity: document.getElementById('humidity'),
+    feelsLike: document.getElementById('feelsLike'),
+    visibility: document.getElementById('visibility'),
+    // Quick city buttons
+    quickCityBtns: document.querySelectorAll('.quick-city')
+};
+
+// ============================================
+// UTILITY FUNCTIONS
+// ============================================
+
+/**
+ * Format date to readable string
+ * @param {number} timestamp - Unix timestamp
+ * @returns {string} Formatted date string
+ */
+function formatDate(timestamp) {
+    const date = new Date(timestamp * 1000);
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    };
+    return date.toLocaleDateString('en-US', options);
+}
+
+/**
+ * Format day name from timestamp
+ * @param {number} timestamp - Unix timestamp
+ * @returns {string} Day name
+ */
+function getDayName(timestamp) {
+    const date = new Date(timestamp * 1000);
+    return date.toLocaleDateString('en-US', { weekday: 'short' });
+}
+
+/**
+ * Format date for forecast cards
+ * @param {number} timestamp - Unix timestamp
+ * @returns {string} Formatted date (e.g., "Jan 15")
+ */
+function formatShortDate(timestamp) {
+    const date = new Date(timestamp * 1000);
+    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
 
 /**
  * Get weather icon URL
