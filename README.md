@@ -178,3 +178,24 @@ weather-devops-assignment
 ![CI Pipeline](https://github.com/ashanchamindu44-crypto/weather-devops-assignment/actions/workflows/ci.yml/badge.svg)
 
 ![Deploy](https://github.com/ashanchamindu44-crypto/weather-devops-assignment/actions/workflows/deploy.yml/badge.svg)
+
+## Docker Setup
+### Build Docker Image
+docker build -t weather-devops-app .
+### Run Docker Container
+docker run -p 3000:3000 weather-devops-app
+
+### Open in browser:
+
+http://localhost:3000
+### Run with Docker Compose
+docker-compose up --build
+
+### Stop containers:
+
+docker-compose down
+### Requirements
+
+Docker installed
+
+Docker Compose installed
