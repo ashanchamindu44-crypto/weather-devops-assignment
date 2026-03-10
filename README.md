@@ -18,7 +18,7 @@ This project demonstrates professional Git workflows, DevOps practices, CI/CD au
 
 ## Live Deployment
 
-🔗 Live URL: https://weather-devops-app.vercel.app
+🔗 Live URL: weather-devops-assignment-1nml5ezf7.vercel.app
 
 ## Technologies Used
 
